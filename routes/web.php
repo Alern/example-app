@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\IdeasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,4 @@ Route::get('/', function () {
 Route::get('/product',[ProductController::class, 'index'])->name('product.index');
 Route::get('/product/create',[ProductController::class, 'create'])->name('product.create');
 Route::post('/product',[ProductController::class, 'store'])->name('product.store');
+Route::get('/idea',[IdeasController::class, 'myIdeas'])->name('ideas.ideas');
